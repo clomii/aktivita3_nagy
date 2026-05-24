@@ -1,0 +1,3 @@
+# No mandatory external runtime dependencies.
+# Optional for richer PDF extraction on arbitrary PDFs:
+# pypdf==5.9.0

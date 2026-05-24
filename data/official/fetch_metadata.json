@@ -1,0 +1,121 @@
+[
+  {
+    "doc_id": "official_ai_act_full",
+    "title": "Full official EU AI Act snapshot - Regulation (EU) 2024/1689",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "tags": [
+      "official",
+      "ai-act",
+      "eur-lex",
+      "full-text"
+    ],
+    "fetched_at_utc": "2026-05-23T02:27:42+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 1532529,
+    "sha256": "c6656fbf84d2fa23f31cf4c3a67328350b1c45887dda136ea0dc101e47e86b73",
+    "local_path": "data/official/raw/official_ai_act_full.md",
+    "word_count": 91588
+  },
+  {
+    "doc_id": "official_gdpr_full",
+    "title": "Full official GDPR snapshot - Regulation (EU) 2016/679",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+    "tags": [
+      "official",
+      "gdpr",
+      "eur-lex",
+      "full-text"
+    ],
+    "fetched_at_utc": "2026-05-23T02:27:42+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 809033,
+    "sha256": "a66ff864347e03caa8630b5270a732acfc39300aee09c35cb8dc66a821cf8d62",
+    "local_path": "data/official/raw/official_gdpr_full.md",
+    "word_count": 55010
+  },
+  {
+    "doc_id": "official_ec_data_protection_rules",
+    "title": "European Commission data protection rules for business and organisations",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/eu-data-protection-rules_en",
+    "tags": [
+      "official",
+      "gdpr",
+      "commission",
+      "data-protection"
+    ],
+    "fetched_at_utc": "2026-05-23T02:27:42+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 161742,
+    "sha256": "c9f06df4e3245807d818a9fc2f233e35121044f271fa717283c07060f54b4474",
+    "local_path": "data/official/raw/official_ec_data_protection_rules.md",
+    "word_count": 1570
+  },
+  {
+    "doc_id": "official_ec_gdpr_principles",
+    "title": "European Commission GDPR principles",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "tags": [
+      "official",
+      "gdpr",
+      "commission",
+      "principles"
+    ],
+    "fetched_at_utc": "2026-05-23T02:27:42+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 150817,
+    "sha256": "d546a94c5a2af82263cc1079e7f395c587d792a6ff5fca6aee252df22c76c5fd",
+    "local_path": "data/official/raw/official_ec_gdpr_principles.md",
+    "word_count": 740
+  },
+  {
+    "doc_id": "official_edpb_consent_guidelines",
+    "title": "EDPB Guidelines 05/2020 on consent under Regulation 2016/679",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
+    "tags": [
+      "official",
+      "gdpr",
+      "edpb",
+      "consent"
+    ],
+    "fetched_at_utc": "2026-05-23T02:27:42+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 64461,
+    "sha256": "bd2f24ee1e1bed474e85aec143295112f4975f90fa128c4544971f612bf396ed",
+    "local_path": "data/official/raw/official_edpb_consent_guidelines.md",
+    "word_count": 650
+  },
+  {
+    "doc_id": "official_edpb_wp29_endorsed_guidelines",
+    "title": "EDPB endorsed WP29 guidelines",
+    "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/endorsed-wp29-guidelines_en",
+    "tags": [
+      "official",
+      "gdpr",
+      "edpb",
+      "guidelines"
+    ],
+    "fetched_at_utc": "2026-05-23T02:27:42+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 47066,
+    "sha256": "484a921447132dcd3978a644bc574c1a8f74d41fed6684d2a4e2a9e49a37e952",
+    "local_path": "data/official/raw/official_edpb_wp29_endorsed_guidelines.md",
+    "word_count": 752
+  },
+  {
+    "doc_id": "official_gpai_code_practice",
+    "title": "European Commission GPAI Code of Practice",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "tags": [
+      "official",
+      "ai-act",
+      "gpai",
+      "commission"
+    ],
+    "fetched_at_utc": "2026-05-23T02:27:42+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 59395,
+    "sha256": "dd0bb5a7b76e5a51398271315e0bd722ffaf1db31598a26edd9e3f692620cf30",
+    "local_path": "data/official/raw/official_gpai_code_practice.md",
+    "word_count": 908
+  }
+]

@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Živé demo | EU AI Act/GDPR asistent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --panel-2: #eef4f7;
+      --text: #182027;
+      --muted: #5c6975;
+      --line: #d8e0e6;
+      --accent: #0f766e;
+      --accent-2: #2563eb;
+      --warn: #b45309;
+      --danger: #b91c1c;
+      --ok: #15803d;
+      --shadow: 0 16px 42px rgba(24, 32, 39, 0.11);
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #121416;
+      --panel: #1b2025;
+      --panel-2: #202a31;
+      --text: #f3f7f8;
+      --muted: #a8b3bd;
+      --line: #33414a;
+      --accent: #2dd4bf;
+      --accent-2: #60a5fa;
+      --warn: #f59e0b;
+      --danger: #f87171;
+      --ok: #4ade80;
+      --shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    button, textarea {
+      font: inherit;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+    }
+
+    aside {
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    main {
+      padding: 24px;
+      min-width: 0;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 1.15;
+      margin: 0 0 6px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin: 24px 0 10px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin: 0 0 6px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .theme {
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .scenario {
+      width: 100%;
+      text-align: left;
+      display: block;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 14px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .scenario:hover,
+    .scenario.active {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent);
+    }
+
+    .scenario small {
+      display: block;
+      color: var(--muted);
+      margin-top: 5px;
+      line-height: 1.35;
+    }
+
+    label {
+      display: block;
+      font-weight: 650;
+      margin: 16px 0 8px;
+    }
+
+    textarea {
+      width: 100%;
+      resize: vertical;
+      min-height: 110px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--panel);
+      color: var(--text);
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--accent-2);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 22%, transparent);
+    }
+
+    .run {
+      margin-top: 14px;
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 12px 14px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .run:disabled {
+      cursor: wait;
+      opacity: 0.72;
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .metric,
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 14px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 21px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .card {
+      padding: 18px;
+      min-width: 0;
+    }
+
+    .answer {
+      white-space: pre-wrap;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .badge.ok { color: var(--ok); }
+    .badge.warn { color: var(--warn); }
+    .badge.danger { color: var(--danger); }
+
+    .citations {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .citation {
+      border-left: 3px solid var(--accent-2);
+      background: var(--panel-2);
+      border-radius: 6px;
+      padding: 10px 12px;
+      overflow-wrap: anywhere;
+    }
+
+    code {
+      font-family: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .state {
+      display: grid;
+      grid-template-columns: 100px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      padding: 9px 10px;
+      border-radius: 6px;
+      background: var(--panel-2);
+    }
+
+    .state strong {
+      color: var(--accent-2);
+      overflow-wrap: anywhere;
+    }
+
+    details {
+      margin-top: 16px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+
+    pre {
+      overflow: auto;
+      max-height: 420px;
+      padding: 14px;
+      border-radius: 8px;
+      background: #0d1117;
+      color: #dbeafe;
+      font-size: 13px;
+    }
+
+    .empty {
+      min-height: 380px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .loading {
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+
+    @media (max-width: 980px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: relative;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .grid,
+      .status-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="topbar">
+        <div>
+          <h1>Živé demo</h1>
+          <p>EU AI Act/GDPR multi-agent asistent</p>
+        </div>
+        <button class="theme" id="themeToggle" type="button">Dark</button>
+      </div>
+
+      <h2>Scenáre</h2>
+      <button class="scenario active" type="button" data-label="success" data-question="Musí chatbot oznámiť používateľovi, že komunikuje s AI?">
+        <h3>Úspešný prípad</h3>
+        <small>Očakávané: odpoveď s citáciami a <code>abstained=false</code>.</small>
+      </button>
+      <button class="scenario" type="button" data-label="limitation" data-question="Prečo consent nie je vždy najlepší lawful basis?">
+        <h3>Zlyhanie / limitácia</h3>
+        <small>Očakávané: správny smer odpovede, ale citácie môžu ukázať limit retrievalu.</small>
+      </button>
+      <button class="scenario" type="button" data-label="abstain" data-question="Aká je presná suma pokuty pre našu firmu za incident z minulého týždňa?">
+        <h3>Zdržanie sa odpovede</h3>
+        <small>Očakávané: systém nevymyslí interný fakt a vráti <code>abstained=true</code>.</small>
+      </button>
+
+      <label for="question">Vlastná otázka</label>
+      <textarea id="question" spellcheck="true">Musí chatbot oznámiť používateľovi, že komunikuje s AI?</textarea>
+
+      <label for="note">Moja očakávaná odpoveď alebo poznámka</label>
+      <textarea id="note" spellcheck="true" placeholder="Voliteľné: sem si môžeš napísať, čo chceš pri obhajobe porovnať s odpoveďou systému."></textarea>
+
+      <button class="run" id="runButton" type="button">Spustiť otázku</button>
+    </aside>
+
+    <main>
+      <div class="status-row">
+        <div class="metric">
+          <strong id="statusMetric">Pripravené</strong>
+          <span>stav odpovede</span>
+        </div>
+        <div class="metric">
+          <strong id="confidenceMetric">-</strong>
+          <span>confidence</span>
+        </div>
+        <div class="metric">
+          <strong id="citationMetric">-</strong>
+          <span>citácie</span>
+        </div>
+        <div class="metric">
+          <strong id="stateMetric">-</strong>
+          <span>agentické stavy</span>
+        </div>
+      </div>
+
+      <section id="emptyState" class="empty">
+        <div>
+          <h2>Vyber scenár alebo polož vlastnú otázku</h2>
+          <p>Výsledok sa zobrazí ako odpoveď, citácie, trace a validný JSON.</p>
+        </div>
+      </section>
+
+      <section id="result" class="grid" hidden>
+        <article class="card">
+          <div id="answerBadge" class="badge">Čakám</div>
+          <h2>Odpoveď</h2>
+          <div id="answerText" class="answer"></div>
+
+          <div id="notePanel" hidden>
+            <h2>Moja poznámka</h2>
+            <p id="noteText"></p>
+          </div>
+
+          <h2>Citácie</h2>
+          <div id="citations" class="citations"></div>
+        </article>
+
+        <aside class="card" style="position: static; height: auto; overflow: visible;">
+          <h2>Trace</h2>
+          <div id="timeline" class="timeline"></div>
+          <details>
+            <summary>JSON výstup</summary>
+            <pre id="jsonOutput"></pre>
+          </details>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const scenarios = document.querySelectorAll(".scenario");
+    const questionInput = document.querySelector("#question");
+    const noteInput = document.querySelector("#note");
+    const runButton = document.querySelector("#runButton");
+    const emptyState = document.querySelector("#emptyState");
+    const result = document.querySelector("#result");
+    const answerText = document.querySelector("#answerText");
+    const answerBadge = document.querySelector("#answerBadge");
+    const citationsEl = document.querySelector("#citations");
+    const timelineEl = document.querySelector("#timeline");
+    const jsonOutput = document.querySelector("#jsonOutput");
+    const notePanel = document.querySelector("#notePanel");
+    const noteText = document.querySelector("#noteText");
+    const statusMetric = document.querySelector("#statusMetric");
+    const confidenceMetric = document.querySelector("#confidenceMetric");
+    const citationMetric = document.querySelector("#citationMetric");
+    const stateMetric = document.querySelector("#stateMetric");
+    const themeToggle = document.querySelector("#themeToggle");
+
+    let currentLabel = "success";
+
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      themeToggle.textContent = theme === "dark" ? "Light" : "Dark";
+      localStorage.setItem("liveDemoTheme", theme);
+    }
+
+    setTheme(localStorage.getItem("liveDemoTheme") || "light");
+    themeToggle.addEventListener("click", () => {
+      setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    });
+
+    scenarios.forEach((button) => {
+      button.addEventListener("click", () => {
+        scenarios.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        currentLabel = button.dataset.label;
+        questionInput.value = button.dataset.question;
+      });
+    });
+
+    runButton.addEventListener("click", runQuestion);
+    questionInput.addEventListener("input", () => {
+      currentLabel = "custom";
+      scenarios.forEach((item) => item.classList.remove("active"));
+    });
+
+    async function runQuestion() {
+      const question = questionInput.value.trim();
+      if (!question) {
+        questionInput.focus();
+        return;
+      }
+      setLoading(true);
+      try {
+        const response = await fetch("/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question, label: currentLabel })
+        });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.message || payload.error || "Server error");
+        }
+        render(payload);
+      } catch (error) {
+        renderError(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    function setLoading(isLoading) {
+      runButton.disabled = isLoading;
+      runButton.textContent = isLoading ? "Pracujem..." : "Spustiť otázku";
+      statusMetric.textContent = isLoading ? "Beží" : statusMetric.textContent;
+      emptyState.classList.toggle("loading", isLoading);
+    }
+
+    function render(payload) {
+      const answer = payload.answer;
+      const trace = payload.trace;
+      const citations = answer.citations || [];
+      const states = trace.state_events || [];
+      emptyState.hidden = true;
+      result.hidden = false;
+
+      const abstained = Boolean(answer.abstained);
+      answerBadge.className = "badge " + (abstained ? "warn" : "ok");
+      answerBadge.textContent = abstained ? "Abstain" : "Odpoveď";
+      answerText.textContent = answer.answer;
+
+      statusMetric.textContent = abstained ? "Abstain" : "OK";
+      confidenceMetric.textContent = Number(answer.confidence || 0).toFixed(2);
+      citationMetric.textContent = String(citations.length);
+      stateMetric.textContent = String(states.length);
+
+      const note = noteInput.value.trim();
+      notePanel.hidden = !note;
+      noteText.textContent = note;
+
+      citationsEl.innerHTML = "";
+      if (!citations.length) {
+        citationsEl.innerHTML = "<p>Žiadne citácie.</p>";
+      } else {
+        for (const citation of citations) {
+          const item = document.createElement("div");
+          item.className = "citation";
+          item.innerHTML = `
+            <strong><code>${escapeHtml(citation.doc_id)}</code></strong>
+            <div><code>${escapeHtml(citation.chunk_id)}</code></div>
+            <p>${escapeHtml(citation.quote)}</p>
+          `;
+          citationsEl.appendChild(item);
+        }
+      }
+
+      timelineEl.innerHTML = "";
+      for (const event of states) {
+        const item = document.createElement("div");
+        item.className = "state";
+        item.innerHTML = `
+          <strong>${escapeHtml(event.state)}</strong>
+          <span>${escapeHtml(event.message)}</span>
+        `;
+        timelineEl.appendChild(item);
+      }
+      jsonOutput.textContent = JSON.stringify(payload, null, 2);
+    }
+
+    function renderError(error) {
+      emptyState.hidden = true;
+      result.hidden = false;
+      answerBadge.className = "badge danger";
+      answerBadge.textContent = "Chyba";
+      answerText.textContent = error.message;
+      citationsEl.innerHTML = "<p>Žiadne citácie.</p>";
+      timelineEl.innerHTML = "";
+      jsonOutput.textContent = JSON.stringify({ error: error.message }, null, 2);
+      statusMetric.textContent = "Chyba";
+      confidenceMetric.textContent = "-";
+      citationMetric.textContent = "-";
+      stateMetric.textContent = "-";
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+  </script>
+</body>
+</html>

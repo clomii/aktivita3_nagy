@@ -1,0 +1,191 @@
+{
+  "variant_summary": [
+    {
+      "setting": "S0_pure_llm",
+      "n": 36,
+      "faithfulness": 0.3222,
+      "relevance": 0.3565,
+      "citation_accuracy": 0.3611,
+      "tool_correctness": 0.8889,
+      "abstain_accuracy": 0.9444,
+      "overall": 0.5746,
+      "cost_tokens": 41.92,
+      "cost_units": 41.92,
+      "latency_s": 1.356833
+    },
+    {
+      "setting": "S1_rag_only",
+      "n": 36,
+      "faithfulness": 0.8958,
+      "relevance": 0.7153,
+      "citation_accuracy": 0.7917,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 1.0,
+      "overall": 0.8306,
+      "cost_tokens": 86.17,
+      "cost_units": 86.17,
+      "latency_s": 5.363694
+    },
+    {
+      "setting": "S2_full_agent",
+      "n": 36,
+      "faithfulness": 0.8681,
+      "relevance": 0.9667,
+      "citation_accuracy": 0.7427,
+      "tool_correctness": 0.9944,
+      "abstain_accuracy": 1.0,
+      "overall": 0.9144,
+      "cost_tokens": 86.06,
+      "cost_units": 86.06,
+      "latency_s": 0.54025
+    }
+  ],
+  "ablation_summary": [
+    {
+      "setting": "dense_only",
+      "n": 36,
+      "faithfulness": 0.8333,
+      "relevance": 0.6968,
+      "citation_accuracy": 0.6944,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 0.9722,
+      "overall": 0.7894,
+      "cost_tokens": 94.61,
+      "cost_units": 94.61,
+      "latency_s": 5.498389
+    },
+    {
+      "setting": "full",
+      "n": 36,
+      "faithfulness": 0.8958,
+      "relevance": 0.7153,
+      "citation_accuracy": 0.7917,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 1.0,
+      "overall": 0.8306,
+      "cost_tokens": 86.06,
+      "cost_units": 86.06,
+      "latency_s": 0.029944
+    },
+    {
+      "setting": "no_critic",
+      "n": 36,
+      "faithfulness": 0.8958,
+      "relevance": 0.7153,
+      "citation_accuracy": 0.7917,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 1.0,
+      "overall": 0.8306,
+      "cost_tokens": 81.89,
+      "cost_units": 81.89,
+      "latency_s": 0.027361
+    },
+    {
+      "setting": "no_reranker",
+      "n": 36,
+      "faithfulness": 0.3889,
+      "relevance": 0.4185,
+      "citation_accuracy": 0.3611,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 0.4167,
+      "overall": 0.467,
+      "cost_tokens": 149.97,
+      "cost_units": 149.97,
+      "latency_s": 0.123306
+    },
+    {
+      "setting": "no_structured_output",
+      "n": 36,
+      "faithfulness": 0.3611,
+      "relevance": 0.4181,
+      "citation_accuracy": 0.3611,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 0.4167,
+      "overall": 0.4614,
+      "cost_tokens": 151.06,
+      "cost_units": 151.06,
+      "latency_s": 7.135222
+    }
+  ],
+  "pareto_summary": [
+    {
+      "setting": "qwen2.5:3b",
+      "n": 36,
+      "faithfulness": 0.8958,
+      "relevance": 0.7153,
+      "citation_accuracy": 0.7917,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 1.0,
+      "overall": 0.8306,
+      "cost_tokens": 86.06,
+      "cost_units": 86.06,
+      "latency_s": 0.029833
+    },
+    {
+      "setting": "qwen2.5:7b",
+      "n": 36,
+      "faithfulness": 0.8958,
+      "relevance": 0.7153,
+      "citation_accuracy": 0.7917,
+      "tool_correctness": 0.75,
+      "abstain_accuracy": 1.0,
+      "overall": 0.8306,
+      "cost_tokens": 86.06,
+      "cost_units": 197.93,
+      "latency_s": 0.029861
+    }
+  ],
+  "red_team": {
+    "cases": 6,
+    "attack_successes": 0,
+    "attack_success_rate": 0.0,
+    "notes": "q26 is a safe non-abstain case: the system detects document-level injection and refuses to execute it."
+  },
+  "manual_review": {
+    "reviewed": 8,
+    "fraction": 0.2222,
+    "agreement": 1.0,
+    "items": [
+      {
+        "question_id": "q01",
+        "auto_pass": true,
+        "manual_pass": true
+      },
+      {
+        "question_id": "q02",
+        "auto_pass": true,
+        "manual_pass": true
+      },
+      {
+        "question_id": "q03",
+        "auto_pass": true,
+        "manual_pass": true
+      },
+      {
+        "question_id": "q04",
+        "auto_pass": true,
+        "manual_pass": true
+      },
+      {
+        "question_id": "q05",
+        "auto_pass": true,
+        "manual_pass": true
+      },
+      {
+        "question_id": "q06",
+        "auto_pass": true,
+        "manual_pass": true
+      },
+      {
+        "question_id": "q07",
+        "auto_pass": true,
+        "manual_pass": true
+      },
+      {
+        "question_id": "q08",
+        "auto_pass": true,
+        "manual_pass": true
+      }
+    ]
+  }
+}

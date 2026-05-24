@@ -1,0 +1,107 @@
+[
+  {
+    "doc_id": "official_ai_act_full",
+    "title": "Full official EU AI Act snapshot - Regulation (EU) 2024/1689",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "path": "data/official/raw/official_ai_act_full.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "ai-act",
+      "eur-lex",
+      "full-text"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_gdpr_full",
+    "title": "Full official GDPR snapshot - Regulation (EU) 2016/679",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+    "path": "data/official/raw/official_gdpr_full.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "eur-lex",
+      "full-text"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_ec_data_protection_rules",
+    "title": "European Commission data protection rules for business and organisations",
+    "fmt": "md",
+    "source_url": "https://commission.europa.eu/law/law-topic/data-protection/eu-data-protection-rules_en",
+    "path": "data/official/raw/official_ec_data_protection_rules.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "commission",
+      "data-protection"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_ec_gdpr_principles",
+    "title": "European Commission GDPR principles",
+    "fmt": "md",
+    "source_url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "path": "data/official/raw/official_ec_gdpr_principles.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "commission",
+      "principles"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_edpb_consent_guidelines",
+    "title": "EDPB Guidelines 05/2020 on consent under Regulation 2016/679",
+    "fmt": "md",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
+    "path": "data/official/raw/official_edpb_consent_guidelines.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "edpb",
+      "consent"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_edpb_wp29_endorsed_guidelines",
+    "title": "EDPB endorsed WP29 guidelines",
+    "fmt": "md",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/endorsed-wp29-guidelines_en",
+    "path": "data/official/raw/official_edpb_wp29_endorsed_guidelines.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "edpb",
+      "guidelines"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_gpai_code_practice",
+    "title": "European Commission GPAI Code of Practice",
+    "fmt": "md",
+    "source_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "path": "data/official/raw/official_gpai_code_practice.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "ai-act",
+      "gpai",
+      "commission"
+    ],
+    "is_distractor": false
+  }
+]

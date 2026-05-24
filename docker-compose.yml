@@ -1,0 +1,74 @@
+services:
+  app:
+    build:
+      context: .
+    image: eu-ai-gdpr-agent:latest
+    environment:
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-}
+      OLLAMA_TIMEOUT_S: ${OLLAMA_TIMEOUT_S:-120}
+      LIVE_EURLEX: ${LIVE_EURLEX:-0}
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    command: ["python", "run_eval.py", "--config", "configs/level2.yaml", "--llm-judge"]
+
+  quick:
+    image: eu-ai-gdpr-agent:latest
+    build:
+      context: .
+    profiles: ["tools"]
+    environment:
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-}
+      OLLAMA_TIMEOUT_S: ${OLLAMA_TIMEOUT_S:-120}
+      LIVE_EURLEX: ${LIVE_EURLEX:-0}
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    command: ["python", "run_eval.py", "--config", "configs/level2.yaml", "--quick"]
+
+  test:
+    image: eu-ai-gdpr-agent:latest
+    build:
+      context: .
+    profiles: ["tools"]
+    command: ["python", "-m", "unittest", "discover", "tests"]
+
+  demo:
+    image: eu-ai-gdpr-agent:latest
+    build:
+      context: .
+    profiles: ["tools"]
+    environment:
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-}
+      OLLAMA_TIMEOUT_S: ${OLLAMA_TIMEOUT_S:-120}
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    command: ["python", "-m", "rag_agent.demo"]
+
+  web-demo:
+    image: eu-ai-gdpr-agent:latest
+    build:
+      context: .
+    profiles: ["tools"]
+    environment:
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-}
+      OLLAMA_TIMEOUT_S: ${OLLAMA_TIMEOUT_S:-120}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    command: ["python", "-m", "rag_agent.web_demo", "--host", "0.0.0.0", "--port", "8080"]
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["ollama"]
+    gpus: all
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+
+volumes:
+  ollama-data:

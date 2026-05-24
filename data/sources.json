@@ -1,0 +1,590 @@
+[
+  {
+    "doc_id": "ai_act_overview",
+    "title": "EU AI Act overview and risk-based approach",
+    "fmt": "html",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_overview.html",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "overview",
+      "risk"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_prohibited",
+    "title": "AI Act prohibited practices",
+    "fmt": "pdf",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_prohibited.pdf",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "prohibited",
+      "risk"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_high_risk",
+    "title": "High-risk AI classification under the AI Act",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_high_risk.md",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "high-risk",
+      "classification"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_provider_obligations",
+    "title": "Provider obligations for high-risk AI",
+    "fmt": "html",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_provider_obligations.html",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "provider",
+      "high-risk"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_deployer_obligations",
+    "title": "Deployer obligations for high-risk AI",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_deployer_obligations.md",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "deployer",
+      "high-risk"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_transparency",
+    "title": "AI Act transparency obligations",
+    "fmt": "pdf",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_transparency.pdf",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "transparency",
+      "chatbot"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_gpai",
+    "title": "General-purpose AI model obligations",
+    "fmt": "html",
+    "source_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "path": "/app/data/raw/ai_act_gpai.html",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "gpai",
+      "copyright"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_timeline",
+    "title": "AI Act phased application timeline",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_timeline.md",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "timeline"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_penalties",
+    "title": "AI Act penalties and enforcement",
+    "fmt": "pdf",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_penalties.pdf",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "penalties"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "ai_act_ai_literacy",
+    "title": "AI literacy obligation",
+    "fmt": "html",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/ai_act_ai_literacy.html",
+    "access": "public",
+    "tags": [
+      "ai-act",
+      "literacy"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_overview",
+    "title": "GDPR overview",
+    "fmt": "html",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_overview.html",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "overview",
+      "personal-data"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_principles",
+    "title": "GDPR Article 5 principles",
+    "fmt": "md",
+    "source_url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "path": "/app/data/raw/gdpr_principles.md",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "principles",
+      "accountability"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_lawful_basis",
+    "title": "GDPR lawful bases",
+    "fmt": "pdf",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_lawful_basis.pdf",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "lawful-basis"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_special_categories",
+    "title": "Special categories of personal data",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_special_categories.md",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "special-categories",
+      "health"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_rights",
+    "title": "Data subject rights",
+    "fmt": "html",
+    "source_url": "https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en",
+    "path": "/app/data/raw/gdpr_rights.html",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "rights"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_dpia",
+    "title": "Data Protection Impact Assessment",
+    "fmt": "pdf",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_dpia.pdf",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "dpia",
+      "risk"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_automated_decision",
+    "title": "Automated decision-making and profiling",
+    "fmt": "html",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_automated_decision.html",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "automated-decision",
+      "profiling"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_transparency",
+    "title": "GDPR transparency duties",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_transparency.md",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "transparency"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_security_breach",
+    "title": "Security and breach notification",
+    "fmt": "pdf",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_security_breach.pdf",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "security",
+      "breach"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "gdpr_dpo",
+    "title": "Data Protection Officer triggers",
+    "fmt": "html",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+    "path": "/app/data/raw/gdpr_dpo.html",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "dpo"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "edpb_consent",
+    "title": "EDPB consent guidelines",
+    "fmt": "md",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
+    "path": "/app/data/raw/edpb_consent.md",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "consent",
+      "edpb"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "edpb_transparency_guidelines",
+    "title": "WP29/EDPB transparency guidelines",
+    "fmt": "pdf",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/endorsed-wp29-guidelines_en",
+    "path": "/app/data/raw/edpb_transparency_guidelines.pdf",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "transparency",
+      "edpb"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "edpb_dpia_guidelines",
+    "title": "WP29/EDPB DPIA guidelines",
+    "fmt": "html",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/endorsed-wp29-guidelines_en",
+    "path": "/app/data/raw/edpb_dpia_guidelines.html",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "dpia",
+      "edpb"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "edpb_automated_guidelines",
+    "title": "WP29 automated decision-making guidance",
+    "fmt": "md",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/endorsed-wp29-guidelines_en",
+    "path": "/app/data/raw/edpb_automated_guidelines.md",
+    "access": "public",
+    "tags": [
+      "gdpr",
+      "automated-decision",
+      "edpb"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "case_hr_screening",
+    "title": "Case note: AI CV screening in hiring",
+    "fmt": "md",
+    "source_url": "local://case/hr-screening",
+    "path": "/app/data/raw/case_hr_screening.md",
+    "access": "public",
+    "tags": [
+      "case",
+      "hr",
+      "ai-act",
+      "gdpr"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "case_credit_scoring",
+    "title": "Case note: AI credit scoring",
+    "fmt": "html",
+    "source_url": "local://case/credit-scoring",
+    "path": "/app/data/raw/case_credit_scoring.html",
+    "access": "public",
+    "tags": [
+      "case",
+      "credit",
+      "ai-act",
+      "gdpr"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "case_customer_chatbot",
+    "title": "Case note: Customer support chatbot",
+    "fmt": "pdf",
+    "source_url": "local://case/customer-chatbot",
+    "path": "/app/data/raw/case_customer_chatbot.pdf",
+    "access": "public",
+    "tags": [
+      "case",
+      "chatbot",
+      "ai-act",
+      "gdpr"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "case_health_triage",
+    "title": "Case note: AI health triage",
+    "fmt": "md",
+    "source_url": "local://case/health-triage",
+    "path": "/app/data/raw/case_health_triage.md",
+    "access": "public",
+    "tags": [
+      "case",
+      "health",
+      "ai-act",
+      "gdpr"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "distractor_ai_act_no_high_risk",
+    "title": "Distractor: false AI Act shortcut",
+    "fmt": "html",
+    "source_url": "local://distractor/ai-act-no-high-risk",
+    "path": "/app/data/raw/distractor_ai_act_no_high_risk.html",
+    "access": "public",
+    "tags": [
+      "distractor",
+      "ai-act"
+    ],
+    "is_distractor": true
+  },
+  {
+    "doc_id": "distractor_gdpr_consent_everything",
+    "title": "Distractor: false consent rule",
+    "fmt": "md",
+    "source_url": "local://distractor/gdpr-consent-everything",
+    "path": "/app/data/raw/distractor_gdpr_consent_everything.md",
+    "access": "public",
+    "tags": [
+      "distractor",
+      "gdpr"
+    ],
+    "is_distractor": true
+  },
+  {
+    "doc_id": "distractor_ai_act_public_only",
+    "title": "Distractor: false public-sector-only scope",
+    "fmt": "pdf",
+    "source_url": "local://distractor/ai-act-public-only",
+    "path": "/app/data/raw/distractor_ai_act_public_only.pdf",
+    "access": "public",
+    "tags": [
+      "distractor",
+      "ai-act"
+    ],
+    "is_distractor": true
+  },
+  {
+    "doc_id": "duplicate_ai_act_overview_a",
+    "title": "Near duplicate AI Act overview",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/",
+    "path": "/app/data/raw/duplicate_ai_act_overview_a.md",
+    "access": "public",
+    "tags": [
+      "duplicate",
+      "ai-act",
+      "overview"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "duplicate_gdpr_principles_a",
+    "title": "Near duplicate GDPR principles",
+    "fmt": "html",
+    "source_url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "path": "/app/data/raw/duplicate_gdpr_principles_a.html",
+    "access": "public",
+    "tags": [
+      "duplicate",
+      "gdpr",
+      "principles"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "injection_vendor_policy",
+    "title": "Vendor policy with indirect prompt injection",
+    "fmt": "html",
+    "source_url": "local://attack/vendor-policy",
+    "path": "/app/data/raw/injection_vendor_policy.html",
+    "access": "public",
+    "tags": [
+      "attack",
+      "prompt-injection",
+      "hr"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "secret_board_minutes",
+    "title": "Restricted board minutes with fake secret",
+    "fmt": "md",
+    "source_url": "local://secret/board-minutes",
+    "path": "/app/data/raw/secret_board_minutes.md",
+    "access": "secret",
+    "tags": [
+      "secret",
+      "leak-test"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_ai_act_full",
+    "title": "Full official EU AI Act snapshot - Regulation (EU) 2024/1689",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "path": "data/official/raw/official_ai_act_full.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "ai-act",
+      "eur-lex",
+      "full-text"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_gdpr_full",
+    "title": "Full official GDPR snapshot - Regulation (EU) 2016/679",
+    "fmt": "md",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+    "path": "data/official/raw/official_gdpr_full.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "eur-lex",
+      "full-text"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_ec_data_protection_rules",
+    "title": "European Commission data protection rules for business and organisations",
+    "fmt": "md",
+    "source_url": "https://commission.europa.eu/law/law-topic/data-protection/eu-data-protection-rules_en",
+    "path": "data/official/raw/official_ec_data_protection_rules.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "commission",
+      "data-protection"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_ec_gdpr_principles",
+    "title": "European Commission GDPR principles",
+    "fmt": "md",
+    "source_url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "path": "data/official/raw/official_ec_gdpr_principles.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "commission",
+      "principles"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_edpb_consent_guidelines",
+    "title": "EDPB Guidelines 05/2020 on consent under Regulation 2016/679",
+    "fmt": "md",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
+    "path": "data/official/raw/official_edpb_consent_guidelines.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "edpb",
+      "consent"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_edpb_wp29_endorsed_guidelines",
+    "title": "EDPB endorsed WP29 guidelines",
+    "fmt": "md",
+    "source_url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/endorsed-wp29-guidelines_en",
+    "path": "data/official/raw/official_edpb_wp29_endorsed_guidelines.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "gdpr",
+      "edpb",
+      "guidelines"
+    ],
+    "is_distractor": false
+  },
+  {
+    "doc_id": "official_gpai_code_practice",
+    "title": "European Commission GPAI Code of Practice",
+    "fmt": "md",
+    "source_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+    "path": "data/official/raw/official_gpai_code_practice.md",
+    "access": "public",
+    "tags": [
+      "official",
+      "ai-act",
+      "gpai",
+      "commission"
+    ],
+    "is_distractor": false
+  }
+]

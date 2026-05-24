@@ -1,0 +1,40 @@
+{
+  "project": "EU AI Act / GDPR Multi-Agent Compliance Assistant",
+  "seed": 42,
+  "language": "sk",
+  "paths": {
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed",
+    "eval_set": "data/eval/questions.json",
+    "outputs_dir": "outputs",
+    "report_dir": "report"
+  },
+  "models": {
+    "agent_models": ["qwen2.5:3b", "qwen2.5:7b"],
+    "judge_model": "qwen2.5:14b",
+    "embedding_model": "nomic-embed-text",
+    "provider": "auto"
+  },
+  "retrieval": {
+    "chunk_tokens": 450,
+    "chunk_overlap": 80,
+    "rrf_k": 60,
+    "candidate_k": 20,
+    "final_k": 6,
+    "embedding_model": "nomic-embed-text",
+    "dense_backend": "ollama",
+    "reranker_mode": "llm",
+    "reranker_model": "qwen2.5:3b",
+    "abstain_score_threshold": 0.08
+  },
+  "agent": {
+    "max_tool_calls": 6,
+    "max_replans": 2,
+    "force_json": true
+  },
+  "evaluation": {
+    "variants": ["S0_pure_llm", "S1_rag_only", "S2_full_agent"],
+    "ablations": ["full", "no_reranker", "dense_only", "no_critic", "no_structured_output"],
+    "manual_review_fraction": 0.22
+  }
+}
