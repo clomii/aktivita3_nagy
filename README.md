@@ -302,7 +302,6 @@ akt3/
 |       |-- injection_vendor_policy.html  # Prompt-injection dokument pre red-team.
 |       `-- secret_board_minutes.md       # Falošný secret dokument s access flagom pre leak testy.
 |
-|-- docs/                                # Rezervovaný priečinok pre doplnkovú dokumentáciu.
 |
 |-- outputs/
 |   |-- ablation_quality.svg             # Graf kvality ablačných variantov.
@@ -341,7 +340,6 @@ akt3/
 |   |-- report.md                        # Markdown verzia reportu.
 |   |-- report_level2.tex                # LaTeX report v KOMA-Script šablóne.
 |   |-- report_level2.pdf                # Vygenerovaný PDF report.
-|   `-- verification.html                # HTML stránka vysvetľujúca overenie zadania a obhajobu.
 |
 |-- scripts/
 |   |-- materialize_corpus.py            # Docker-spúšťateľný skript na vygenerovanie seed corpus dát.
